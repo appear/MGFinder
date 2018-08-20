@@ -1,0 +1,36 @@
+{
+    "name": "MGFinder",
+    "version": "1.0.0",
+    "description": "Search for Maven and Gradle",
+    "main": "bin/index.js",
+    "bin": {
+        "mgfinder": "bin/index.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/appear/MGFinder.git"
+    },
+    "keywords": [
+        "Maven",
+        "Gradle",
+        "finder",
+        "search"
+    ],
+    "author": "olaf",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/appear/MGFinder/issues"
+    },
+    "homepage": "https://github.com/appear/MGFinder#readme",
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.2",
+        "keypress": "^0.2.1",
+        "meow": "^5.0.0",
+        "ora": "^3.0.0",
+        "prompts": "^0.1.14",
+        "request": "^2.88.0"
+    }
+}
