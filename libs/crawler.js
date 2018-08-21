@@ -10,6 +10,7 @@ function run(query) {
             const $ = cheerio.load(body);
             // 첫번째 a href 가져오기
             const href = $($("#maincontent .im:nth-child(3) a:nth-child(2n)")[0]).attr('href');
+            console.log('run', href)
             resolve(href);
         });
     })
@@ -48,20 +49,20 @@ function print({ list, link }) {
     })
 }
 
-function getUrl(list, version, href) {
+function getUrl(obj, version) {
     return new Promise((resolve, reject) => {
-        const title = list[version - 1].find(".vbtn").text();
-        const link = `${href}/${title}`;
+        const title = obj.list[version - 1].find(".vbtn").text();
+        const link = `${obj.link}/${title}`;
         resolve(link);
     })
 }
 
-function result(link, vars) {
+function result(link, type) {
     return new Promise((resolve, reject) => {
         request(link, (err, res, body) => {
             if (err) throw err;
             const $ = cheerio.load(body);
-            vars.number === "1" ? printResult($, "#maven-a") : printResult($, "#gradle-a");
+            type === "1" ? printResult($, "#maven-a") : printResult($, "#gradle-a");
             resolve(true);
         })
     })
