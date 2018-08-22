@@ -1,6 +1,6 @@
 {
     "name": "mgfinder",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Search for Maven and Gradle",
     "main": "bin/index.js",
     "bin": {
@@ -27,6 +27,7 @@
     "homepage": "https://github.com/appear/MGFinder#readme",
     "dependencies": {
         "cheerio": "^1.0.0-rc.2",
+        "meow": "^5.0.0",
         "ora": "^3.0.0",
         "prompts": "^0.1.14",
         "request": "^2.88.0"
