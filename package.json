@@ -1,6 +1,6 @@
 {
     "name": "mgfinder",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Search for Maven and Gradle",
     "main": "bin/index.js",
     "bin": {
